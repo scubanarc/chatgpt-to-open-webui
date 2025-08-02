@@ -12,7 +12,7 @@ Convert a ChatGPT export into an Open-WebUI importable JSON.
 ### 1) Download
 ```bash
 git clone git@github.com:scubanarc/chatgpt-to-open-webui.git
-cd chatgpt-to-openwebui
+cd chatgpt-to-open-webui
 ```
 
 ### 2) Export your data from ChatGPT
