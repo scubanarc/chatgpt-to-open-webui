@@ -5,7 +5,7 @@ Convert a ChatGPT export into an Open-WebUI importable JSON.
 ## Features
 - Maps ChatGPT conversations to Open-WebUI format
 - Preserves timestamps, hierarchy, and metadata
-- Skips malformed conversations and tries to import each chat only once using a flat `imported_chat_ids.txt`
+- Skips malformed conversations and tries to import each chat only once using `~/chatgpt/imported.json`
 
 ## Quick Start
 
@@ -43,7 +43,7 @@ Notes:
 - Large imports can take several minutes.
 
 ## De-duplication and Best Practices
-- The converter saves already-imported chat IDs in a flat file `imported_chat_ids.txt` to avoid re-importing the same chats on subsequent runs.
+- The converter saves already-imported chat IDs in `~/chatgpt/imported.json` to avoid re-importing the same chats on subsequent runs.
 - Still, to minimize duplicates, delete all chats from ChatGPT between export→import cycles. That way, the next export only contains new chats.
 
 ## Samples
