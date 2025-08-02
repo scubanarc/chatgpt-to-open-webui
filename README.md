@@ -60,4 +60,4 @@ See `samples/` for example input/output formats:
 - Review terminal output for skipped or malformed conversations.
 
 ## License
-MIT
+Unlicense
