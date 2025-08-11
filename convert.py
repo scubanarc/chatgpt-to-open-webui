@@ -5,7 +5,7 @@ import os
 from datetime import datetime
 
 # Constants
-DEFAULT_MODEL = "openai/chatgpt-4o-latest"
+DEFAULT_MODEL = "openai/chatgpt-5"
 USER_ID = str(uuid.uuid4())
 IMPORTED_TRACKING_FILE = "~/chatgpt/imported.json"
 
@@ -183,7 +183,7 @@ def convert_chatgpt_to_openwebui(chatgpt_data):
 
 # --- File I/O ---
 def main():
-    input_file = "~/chatgpt/chatgpt-export.json"
+    input_file = "~/chatgpt/conversations.json"
     output_file = "~/chatgpt/converted-for-open-webui.json"
 
     if not os.path.exists(input_file):

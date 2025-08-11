@@ -19,13 +19,13 @@ cd chatgpt-to-open-webui
 1. Open ChatGPT
 2. Settings → Data controls → Export data → Request export
 3. When you receive the email, download and extract the export
-4. Copy the JSON file to `~/chatgpt/chatgpt-export.json`
+4. Copy the conversations.json file to `~/chatgpt/conversations.json`
 
 ### 3) Run the converter
 ```bash
 python convert.py
 ```
-- Input: `~/chatgpt/chatgpt-export.json`
+- Input: `~/chatgpt/conversations.json`
 - Output: `~/chatgpt/converted-for-open-webui.json`
 
 ### 4) Backup your Open-WebUI database (important)
@@ -45,11 +45,6 @@ Notes:
 ## De-duplication and Best Practices
 - The converter saves already-imported chat IDs in `~/chatgpt/imported.json` to avoid re-importing the same chats on subsequent runs.
 - Still, to minimize duplicates, delete all chats from ChatGPT between export→import cycles. That way, the next export only contains new chats.
-
-## Samples
-See `samples/` for example input/output formats:
-- `example-chatgpt-export.json`
-- `example-openwebui-export.json`
 
 ## Requirements
 - Python 3.8+
